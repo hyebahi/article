@@ -2,11 +2,12 @@ package project1;
 
 public class Result {
 	public static void main(String[] args) {
-		int result = Result.perfectSubstring("1102021222", 2);
+		int result = Result.perfectSubstring("1102021222", 4);
 	}
 	
 	public static int perfectSubstring(String s, int k) {
 		int subsize = k;
+		int totalPerfectNumber = 0;
 		while(subsize < s.length()){
 			for(int i = 0; i + subsize-1 < s.length() ;i++){
 				String sub = s.substring(i,i+subsize);
@@ -28,13 +29,14 @@ public class Result {
 	            
 	            if(totalperfectNumber == totalNumbers) {
 	            	System.out.println("perfect number is: "+sub);
+	            	totalPerfectNumber++;
 	            }
 			}
 			
 			subsize++;
 		}
         
-        return 0;
+        return totalPerfectNumber;
         
     }
 }
