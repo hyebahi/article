@@ -27,7 +27,7 @@ public class Result {
 	            }
 	            
 	            if(totalperfectNumber == totalNumbers) {
-	            	System.out.println("perfect number is"+sub);
+	            	System.out.println("perfect number is: "+sub);
 	            }
 			}
 			
